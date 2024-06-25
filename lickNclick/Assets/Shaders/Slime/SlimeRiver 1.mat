@@ -25,7 +25,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Bubbles:
-        m_Texture: {fileID: 2800000, guid: e1d1bf9575a552e48aad17a0ac10ff6f, type: 3}
+        m_Texture: {fileID: 2800000, guid: eaa9b0f227a321c47a174f556fc25ee5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Bubbles_ambient_occlusion:
@@ -33,7 +33,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal2Texture:
-        m_Texture: {fileID: 2800000, guid: 1c1cfb6aa81a0684785d56d54407066d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 825029d57e1688f449a1f3a37b94d70f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapTexture:
@@ -130,7 +130,7 @@ Material:
     - _LocalDisplacementStrength: {r: 0, g: 0, b: 0, a: 0}
     - _ScrollSpeed: {r: 0, g: 0, b: 0, a: 0}
     - _SplurColor: {r: 0, g: 0, b: 0, a: 0}
-    - _SplurEmission: {r: 0, g: 0.32115427, b: 0.7735849, a: 0}
+    - _SplurEmission: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &9096251761093512714
 MonoBehaviour:
