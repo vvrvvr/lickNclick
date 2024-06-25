@@ -24,6 +24,22 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Bubbles:
+        m_Texture: {fileID: 2800000, guid: e1d1bf9575a552e48aad17a0ac10ff6f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Bubbles_ambient_occlusion:
+        m_Texture: {fileID: 2800000, guid: bca01e2e70720274e9576aa81ac78d11, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal2Texture:
+        m_Texture: {fileID: 2800000, guid: 1c1cfb6aa81a0684785d56d54407066d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMapTexture:
+        m_Texture: {fileID: 2800000, guid: e6641ef08e217494aae70f778ae2cc75, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_1675b8e426354752aa61fe2e06f2e3b6_Texture_1:
         m_Texture: {fileID: 2800000, guid: e7792b22f94ee6f4f894c46680944039, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -72,6 +88,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 4d7339f475894454ab9a9a8fb636c7bb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Splurs:
+        m_Texture: {fileID: 2800000, guid: 1b3a2a62e26bcd345a8ba4c3e68b502a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -86,31 +106,31 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BubbleMovementRatio: 0.91
-    - _BubbleNormalStrength: 1.18
+    - _BubbleMovementRatio: 1.8
+    - _BubbleNormalStrength: 1
     - _DisplacementStrength: 1
     - _Divide_by: 0.47
     - _Float: 1
-    - _LocalDisplacementScale: 3.84
-    - _LocalDisplacementSpeed: 1.15
+    - _LocalDisplacementScale: -0.66
+    - _LocalDisplacementSpeed: 18.08
     - _Offset: -0.8
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SurfaceNoise: 2.72
-    - _SurfaceNoiseScale: 2.7
-    - _SurfaceNoiseSpeed: 0.97
+    - _SurfaceNoiseScale: 1
+    - _SurfaceNoiseSpeed: 1
     - _SurfaceNoiseStrength: 1
-    - _smoothness: 0.56
+    - _smoothness: 2.02
     m_Colors:
-    - _BaseColor: {r: 0.1116665, g: 0.56765074, b: 0, a: 0}
-    - _BubblesEmission: {r: 3.6852188, g: 18.523073, b: 0, a: 0}
+    - _BaseColor: {r: 0.5754717, g: 0.40391597, b: 0.40391597, a: 0}
+    - _BubblesEmission: {r: 0.9528302, g: 0, b: 0, a: 0}
     - _Emission: {r: 0, g: 1, b: 0.052033424, a: 0}
-    - _Flow: {r: 0.06, g: 0.51, b: 0, a: 0}
+    - _Flow: {r: -0.1, g: 0.1, b: 0, a: 0}
     - _LocalDisplacement: {r: 0, g: 0.7, b: 0.32, a: 0}
-    - _LocalDisplacementStrength: {r: 0, g: 0.51, b: 0.4, a: 0}
+    - _LocalDisplacementStrength: {r: 0, g: 0, b: 0, a: 0}
     - _ScrollSpeed: {r: 0, g: 0, b: 0, a: 0}
-    - _SplurColor: {r: 0.3584906, g: 0.22768678, b: 0, a: 0}
-    - _SplurEmission: {r: 1.1843138, g: 2, b: 0, a: 0}
+    - _SplurColor: {r: 0, g: 0, b: 0, a: 0}
+    - _SplurEmission: {r: 0, g: 0.32115427, b: 0.7735849, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &9096251761093512714
 MonoBehaviour:
