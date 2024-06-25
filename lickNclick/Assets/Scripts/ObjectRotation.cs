@@ -35,7 +35,7 @@ public class ObjectRotation : MonoBehaviour
     private void OnMouseUp()
     {
         isDragging = false;
-        Debug.Log("mouse up");
+        //Debug.Log("mouse up");
     }
 
     void OnMouseDrag()
