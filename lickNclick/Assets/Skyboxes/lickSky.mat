@@ -29,6 +29,7 @@ Material:
   - _ALPHATEST_ON
   - _EMISSION
   - _GLOSSYREFLECTIONS_OFF
+  - _MAPPING_LATITUDE_LONGITUDE_LAYOUT
   - _SUNDISK_NONE
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -161,10 +162,14 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _ImageType: 0
+    - _Layout: 0
     - _LightingEnabled: 1
+    - _Mapping: 1
     - _MaxDistance: 3
     - _Metallic: 0
     - _MinDistance: 2
+    - _MirrorOnBack: 0
     - _Mode: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.005

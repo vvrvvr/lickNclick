@@ -39,7 +39,10 @@ public class ChangeCameraToChoosen : MonoBehaviour
     public void ChangeCamera()
     {
         Debug.Log("change camera");
-        DialogueManager.instance.FrogSay("startAgain");
+        if (DialogueManager.instance != null)
+        {
+            DialogueManager.instance.FrogSay("startAgain");
+        }
         ParentCam.Priority = 0;
         CamToChange.Priority = 100;
     }
