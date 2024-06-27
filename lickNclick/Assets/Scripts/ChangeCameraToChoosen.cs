@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
@@ -8,11 +9,17 @@ public class ChangeCameraToChoosen : MonoBehaviour
     public CinemachineVirtualCamera ParentCam;
     public CinemachineVirtualCamera CamToChange;
     public bool isActive = false;
-    private bool isHovering = false;
+    public bool isHovering = false;
+
+    public bool isPressed = false;
     // Start is called before the first frame update
     void OnMouseEnter()
     {
         isHovering = true;
+        if (isPressed)
+        {
+            ChangeCamera();
+        }
     }
     void OnMouseExit()
     {
@@ -21,11 +28,28 @@ public class ChangeCameraToChoosen : MonoBehaviour
     
     void OnMouseDown()
     {
-        ChangeCamera();
+       
+        if (isHovering)
+        {
+            ChangeCamera();
+        }
+    }
+
+    private void OnMouseUp()
+    {
+        isPressed = false;
     }
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            isPressed = true;
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            isPressed = false;
+        }
         if (isHovering)
         {
             transform.localScale = Vector3.Lerp(transform.localScale, Vector3.one * 1.1f, Time.deltaTime * 10f);
@@ -34,6 +58,8 @@ public class ChangeCameraToChoosen : MonoBehaviour
         {
             transform.localScale = Vector3.Lerp(transform.localScale, Vector3.one, Time.deltaTime * 10f);
         }
+
+       
     }
 
     public void ChangeCamera()

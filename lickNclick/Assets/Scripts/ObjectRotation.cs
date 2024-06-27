@@ -8,7 +8,6 @@ public class ObjectRotation : MonoBehaviour
     private bool isHovering = false;
     private bool isDragging = false;
 
-
     public Texture2D cursorTexture;
 
     void Start()
@@ -30,23 +29,12 @@ public class ObjectRotation : MonoBehaviour
     void OnMouseDown()
     {
         lastMousePosition = Input.mousePosition;
+        isDragging = true;
     }
 
     private void OnMouseUp()
     {
         isDragging = false;
-        //Debug.Log("mouse up");
-    }
-
-    void OnMouseDrag()
-    {
-        isDragging = true;
-        Vector3 delta = Input.mousePosition - lastMousePosition;
-        float rotationX = delta.y * speed * Time.deltaTime;
-        float rotationY = -delta.x * speed * Time.deltaTime;
-        Vector3 rotation = new Vector3(rotationX, rotationY, 0);
-        transform.Rotate(Camera.main.transform.TransformDirection(rotation), Space.World);
-        lastMousePosition = Input.mousePosition;
     }
 
     void Update()
@@ -59,6 +47,27 @@ public class ObjectRotation : MonoBehaviour
         {
             transform.localScale = Vector3.Lerp(transform.localScale, Vector3.one, Time.deltaTime * 10f);
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        }
+
+        // Проверяем, зажата ли кнопка мыши и находится ли курсор над объектом
+        if (Input.GetMouseButton(0) && isHovering)
+        {
+            if (!isDragging)
+            {
+                lastMousePosition = Input.mousePosition;
+                isDragging = true;
+            }
+
+            Vector3 delta = Input.mousePosition - lastMousePosition;
+            float rotationX = delta.y * speed * Time.deltaTime;
+            float rotationY = -delta.x * speed * Time.deltaTime;
+            Vector3 rotation = new Vector3(rotationX, rotationY, 0);
+            transform.Rotate(Camera.main.transform.TransformDirection(rotation), Space.World);
+            lastMousePosition = Input.mousePosition;
+        }
+        else
+        {
+            isDragging = false;
         }
     }
 }
